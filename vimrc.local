@@ -1,0 +1,11 @@
+syntax enable
+colorscheme darcula
+set relativenumber
+set autowrite
+
+" search files with ctrl p
+nnoremap <c-p> :Files <CR>
+
+" search world used with
+" is necessary install ag command in SO
+nnoremap <Leader>f :Ag<space>
