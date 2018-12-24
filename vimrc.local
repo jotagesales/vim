@@ -10,4 +10,4 @@ nnoremap <c-p> :Files <CR>
 " is necessary install ag command in SO
 nnoremap <Leader>f :Ag<space>
 
-nnoremap <Leader>pdb o import ipdb<CR>ipdb.set_trace()<CR><esc>
+nnoremap <Leader>pdb o<CR>import ipdb<CR>ipdb.set_trace()<CR><esc>
