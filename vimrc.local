@@ -9,3 +9,5 @@ nnoremap <c-p> :Files <CR>
 " search world used with
 " is necessary install ag command in SO
 nnoremap <Leader>f :Ag<space>
+
+nnoremap <Leader>pdb o import ipdb<CR>ipdb.set_trace()<CR><esc>
