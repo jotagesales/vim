@@ -1,7 +1,7 @@
 syntax enable
 colorscheme darcula
 set relativenumber
-inoremap jj <ESC>
+inoremap jj <ESC> :w<CR>
 
 " search files with ctrl p
 nnoremap <c-p> :Files <CR>
