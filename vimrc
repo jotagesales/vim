@@ -189,7 +189,6 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 set number
-
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
   colorscheme molokai
@@ -359,14 +358,9 @@ noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
-noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
-noremap <Leader>gr :Gremove<CR>
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
@@ -532,7 +526,7 @@ let g:airline#extensions#virtualenv#enabled = 1
 
 " Syntax highlight
 " Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
+let g:polyglot_disabled = ['python3']
 let python_highlight_all = 1
 
 
@@ -565,11 +559,11 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " For ruby refactory
-if has('nvim')
-  runtime! macros/matchit.v12.
-els.
-  packadd! matchit
-endif
+"if has('nvim')
+"  runtime! macros/matchit.v12.
+"else
+"  packadd! matchit
+"endif
 
 " Ruby refactory
 nnoremap <leader>rap  :RAddParameter<cr>

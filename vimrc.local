@@ -1,10 +1,11 @@
+set showcmd
 syntax enable
 colorscheme darcula
 set relativenumber
 inoremap jj <ESC> :w<CR>
 
 " search files with ctrl p
-nnoremap <c-p> :Files <CR>
+unoremap <c-p> :Files <CR>
 
 " search world used with
 " is necessary install ag command in SO
