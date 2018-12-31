@@ -5,10 +5,13 @@ set relativenumber
 inoremap jj <ESC> :w<CR>
 
 " search files with ctrl p
-unoremap <c-p> :Files <CR>
+nnoremap <c-p> :Files <CR>
 
 " search world used with
 " is necessary install ag command in SO
 nnoremap <Leader>f :Ag<space>
 
 nnoremap <Leader>pdb o<CR>import ipdb<CR>ipdb.set_trace()<CR><esc>
+
+" syntastic line length
+let g:syntastic_python_flake8_post_args="--max-line-length=120"
