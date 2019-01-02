@@ -2,8 +2,10 @@ set showcmd
 syntax enable
 colorscheme darcula
 set relativenumber
-inoremap jj <ESC> :w<CR>
+" inoremap jj <ESC> :w<CR>
 
+nnoremap ; :
+nnoremap : ;
 " search files with ctrl p
 nnoremap <c-p> :Files <CR>
 
