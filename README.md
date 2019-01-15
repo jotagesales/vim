@@ -1,2 +1,4 @@
-## install plubins
-```vim +PlugInstall +qall```
+## install
+``git clone git@github.com:jotagesales/vim.giti
+cd vim
+./setup.sh´´
