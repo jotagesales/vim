@@ -1,4 +1,5 @@
 ## install
-``git clone git@github.com:jotagesales/vim.giti
+```git clone git@github.com:jotagesales/vim.giti
 cd vim
-./setup.sh´´
+./setup.sh
+```
