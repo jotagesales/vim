@@ -2,7 +2,7 @@ set showcmd
 syntax enable
 colorscheme darcula
 set relativenumber
-" inoremap jj <ESC> :w<CR>
+inoremap jj <ESC>
 
 nnoremap ; :
 nnoremap : ;
@@ -17,3 +17,6 @@ nnoremap <Leader>pdb o<CR>import ipdb<CR>ipdb.set_trace()<CR><esc>
 
 " syntastic line length
 let g:syntastic_python_flake8_post_args="--max-line-length=120"
+
+" helper format json
+nnoremap <Leader>fj :%!python -m json.tool<CR>
