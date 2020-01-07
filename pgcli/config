@@ -1,4 +1,3 @@
-# vi: ft=dosini
 [main]
 
 # Enables context sensitive auto-completion. If this is disabled the all
@@ -81,7 +80,7 @@ search_path_filter = False
 
 # Default pager.
 # By default 'PAGER' environment variable is used
-pager = less -SRXF
+# pager = less -SRXF
 
 # Timing of sql statments and table rendering.
 timing = True
@@ -126,61 +125,54 @@ less_chatty = False
 # \# - "@" sign if logged in as superuser, '>' in other case
 # \n - Newline
 # \dsn_alias - name of dsn alias if -D option is used (empty otherwise)
-prompt = '\u@\h:\d> '
+prompt = "\u@\h:\d> "
 
 # Number of lines to reserve for the suggestion menu
 min_num_menu_lines = 4
 
 # Character used to left pad multi-line queries to match the prompt size.
-multiline_continuation_char = ''
+multiline_continuation_char = ""
 
 # The string used in place of a null value.
-null_string = '<null>'
+null_string = <null>
 
 # manage pager on startup
 enable_pager = True
 
 # Use keyring to automatically save and load password in a secure manner 
 keyring = True
-
-# Custom colors for the completion menu, toolbar, etc.
+pager = less -SRXF
 [colors]
-completion-menu.completion.current = 'bg:#ffffff #000000'
-completion-menu.completion = 'bg:#008888 #ffffff'
-completion-menu.meta.completion.current = 'bg:#44aaaa #000000'
-completion-menu.meta.completion = 'bg:#448888 #ffffff'
-completion-menu.multi-column-meta = 'bg:#aaffff #000000'
-scrollbar.arrow = 'bg:#003333'
-scrollbar = 'bg:#00aaaa'
-selected = '#ffffff bg:#6666aa'
-search = '#ffffff bg:#4444aa'
-search.current = '#ffffff bg:#44aa44'
-bottom-toolbar = 'bg:#222222 #aaaaaa'
-bottom-toolbar.off = 'bg:#222222 #888888'
-bottom-toolbar.on = 'bg:#222222 #ffffff'
-search-toolbar = 'noinherit bold'
-search-toolbar.text = 'nobold'
-system-toolbar = 'noinherit bold'
-arg-toolbar = 'noinherit bold'
-arg-toolbar.text = 'nobold'
-bottom-toolbar.transaction.valid = 'bg:#222222 #00ff5f bold'
-bottom-toolbar.transaction.failed = 'bg:#222222 #ff005f bold'
+completion-menu.completion.current = "bg:#ffffff #000000"
+completion-menu.completion = "bg:#008888 #ffffff"
+completion-menu.meta.completion.current = "bg:#44aaaa #000000"
+completion-menu.meta.completion = "bg:#448888 #ffffff"
+completion-menu.multi-column-meta = "bg:#aaffff #000000"
+scrollbar.arrow = "bg:#003333"
+scrollbar = "bg:#00aaaa"
+selected = "#ffffff bg:#6666aa"
+search = "#ffffff bg:#4444aa"
+search.current = "#ffffff bg:#44aa44"
+bottom-toolbar = "bg:#222222 #aaaaaa"
+bottom-toolbar.off = "bg:#222222 #888888"
+bottom-toolbar.on = "bg:#222222 #ffffff"
+search-toolbar = noinherit bold
+search-toolbar.text = nobold
+system-toolbar = noinherit bold
+arg-toolbar = noinherit bold
+arg-toolbar.text = nobold
+bottom-toolbar.transaction.valid = "bg:#222222 #00ff5f bold"
+bottom-toolbar.transaction.failed = "bg:#222222 #ff005f bold"
 
 # style classes for colored table output
 output.header = "#00ff5f bold"
 output.odd-row = ""
 output.even-row = ""
-
-# Named queries are queries you can execute by name.
 [named queries]
-
-# DSN to call by -D option
+eventlog = SELECT * FROM eventlog ORDER BY id DESC LIMIT 25
 [alias_dsn]
 local_billing = postgres://postgres:mysecretpassword@localhost:5432/billing
-
-# Format for number representation
-# for decimal "d" - 12345678, ",d" - 12,345,678
-# for float "g" - 123456.78, ",g" - 123,456.78
+local_payments = postgres://postgres:mysecretpassword@localhost:5432/acta_store_payments
 [data_formats]
 decimal = ""
 float = ""
