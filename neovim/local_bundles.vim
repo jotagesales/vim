@@ -1,0 +1,5 @@
+Plug 'blueshirts/darcula'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'fisadev/vim-isort'
+Plug 'scrooloose/syntastic'

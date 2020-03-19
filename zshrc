@@ -3,14 +3,18 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jotagesales/.oh-my-zsh"
-export PATH=${HOME}/go/bin:$PATH
+export PATH=/opt/go/bin:$PATH
 export PATH="/Users/jotagesales/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+export GOPATH="$HOME/go"
+export GOBIN="/opt/go/bin"
+
 
 # For compilers to find zlib you may need to set:
-export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
-export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/zlib/lib"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/zlib/include"
+
 
 # For pkg-config to find zlib you may need to set:
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
@@ -107,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ctags="`brew --prefix`/bin/ctags"
-alias vim="mvim"
+alias vim="nvim"
 
 # fzf configurations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -117,3 +121,4 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # start terminal with tmux
 tmux
+export LESS=-SRXF
