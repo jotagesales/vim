@@ -2,12 +2,12 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jotagesales/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 export PATH=/opt/go/bin:$PATH
-export PATH="/Users/jotagesales/.pyenv/bin:$PATH"
+export PATH="${HOME}/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-export GOPATH="$HOME/go"
+export GOPATH="${HOME}/go"
 export GOBIN="/opt/go/bin"
 
 
