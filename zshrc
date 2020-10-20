@@ -13,7 +13,7 @@ export GOBIN="/opt/go/bin"
 
 # For compilers to find zlib you may need to set:
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/zlib/lib"
-export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/zlib/include"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/zlib/include -I/opt/X11/include"
 
 
 # For pkg-config to find zlib you may need to set:
@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ctags="`brew --prefix`/bin/ctags"
-alias vim="nvim"
+# alias vim="nvim"
 
 # fzf configurations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
