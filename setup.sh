@@ -23,7 +23,7 @@ then
 fi
 
 echo "configure neovim"
-cp -r neovim/* $NEOVIM_DIR
+cp -R neovim/* $NEOVIM_DIR
 
 echo "configure pgcli"
 cp -r pgcli/* $PGCLI_DIR
