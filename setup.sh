@@ -28,6 +28,11 @@ cp -R neovim/* $NEOVIM_DIR
 echo "configure pgcli"
 cp -r pgcli/* $PGCLI_DIR
 
+echo "installing spacevim"
+curl -sLf https://spacevim.org/install.sh | bash
+cp -R spacevim/.SpaceVim.d $HOME
+
+
 # cd ~
 # vim +PlugInstall +qall
 nvim +PlugInstall +qall
