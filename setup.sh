@@ -18,21 +18,25 @@ cp zshrc $ZSH
 echo "checking config directory"
 if [ ! -d "${HOME}/.config" ] 
 then
-    mkdir -p $NEOVIM_DIR
     mkdir -p $PGCLI_DIR
 fi
 
-echo "configure neovim"
-cp -R neovim/* $NEOVIM_DIR
+echo "creating nvim direcotry"
+mkdir -p $NEOVIM_DIR
+
+
+# echo "configure neovim"
+# cp -R neovim/* $NEOVIM_DIR
 
 echo "configure pgcli"
 cp -r pgcli/* $PGCLI_DIR
 
-echo "installing spacevim"
+# echo "installing spacevim"
 curl -sLf https://spacevim.org/install.sh | bash
 cp -R spacevim/.SpaceVim.d $HOME
 
 
-# cd ~
-# vim +PlugInstall +qall
+cd ~
+pip install neovim
+vim +PlugInstall +qall
 nvim +PlugInstall +qall
